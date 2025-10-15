@@ -1,0 +1,18 @@
+path: datasets/taco
+train: images/train
+val: images/val
+
+nc: 61  # number of categories in TACO
+names: [
+  'Aluminium foil', 'Battery', 'Aluminium blister pack', 'Carded blister pack', 'Other plastic bottle',
+  'Clear plastic bottle', 'Glass bottle', 'Plastic bottle cap', 'Metal bottle cap', 'Broken glass',
+  'Drink can', 'Food can', 'Aerosol', 'Glass jar', 'Plastic lid', 'Metal lid', 'Tetra pak',
+  'Plastic cup', 'Paper cup', 'Foam cup', 'Plastic bag', 'Plastic film', 'Wrappers',
+  'Plastic utensils', 'Paper straw', 'Paper bag', 'Paper', 'Cardboard', 'Paperboard', 'Tissue paper',
+  'Toilet paper roll', 'Egg carton', 'Foam food container', 'Food waste', 'Napkin', 'Other plastic packaging',
+  'Plastic gloves', 'Plastic face mask', 'Other', 'Rubber', 'Sponge', 'Cigarette', 'Rope & strings',
+  'Net', 'Fabric', 'Clothing', 'Shoes', 'Sandals', 'Leather', 'Wood', 'Leaves', 'Twigs',
+  'Grass', 'Styrofoam', 'Construction waste', 'E-waste', 'Organic waste', 'Paper towel',
+  'Plastic straw', 'Hard plastic', 'Soft plastic'
+]
+
