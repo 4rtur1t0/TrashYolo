@@ -7,5 +7,7 @@ from ultralytics import YOLO
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     model = YOLO('yolov8n.pt')  # smallest model (fast)
-    model.train(data='trash_taco.yaml', epochs=50, imgsz=640)
+    # model.train(data='datasets/trash_taco.yaml', epochs=50, imgsz=640, freeze=0)
+    model.train(data='datasets/trash_taco.yaml', epochs=50, imgsz=640, freeze=10)
+
 
