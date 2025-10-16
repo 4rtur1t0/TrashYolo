@@ -95,6 +95,7 @@ def inference(image_path, model, delay, conf=0.5, title='Yolo trash detection'):
             break
         # for result in results:
         #     result.show()
+    cv2.waitKey(delay=-1)
     cv2.destroyAllWindows()
 
 
