@@ -4,6 +4,7 @@ import cv2
 
 weights_path = 'runs/detect/train5/weights/best.pt'
 
+
 def yolo_orig_on_people():
     """
     EVALUAMOS EL MODELO ORIGINAL DE YOLO SOBRE PERSONAS
@@ -11,17 +12,18 @@ def yolo_orig_on_people():
     """
     image_path = 'datasets/people/'
     model = YOLO('yolov8n.pt')
-    delay = 1500
+    delay = 2000
     return image_path, model, delay
+
 
 def yolo_orig_on_trash():
     """
     EVALUAMOS EL MODELO ORIGINAL DE YOLO SOBRE DATOS DE BASURA
     :return:
     """
-    image_path = 'datasets/taco/images/train/'
+    image_path = 'datasets/video/video1/'
     model = YOLO('yolov8n.pt')
-    delay = 1500
+    delay = 100
     return image_path, model, delay
 
 
@@ -32,7 +34,7 @@ def yolo_trash_on_people():
     """
     image_path = 'datasets/people/'
     model = YOLO(weights_path)
-    delay = 1500
+    delay = 2000
     return image_path, model, delay
 
 
@@ -43,7 +45,7 @@ def yolo_trash_on_trash_train():
     """
     image_path = 'datasets/taco/images/train/'
     model = YOLO(weights_path)
-    delay = 1500
+    delay = 2000
     return image_path, model, delay
 
 
@@ -54,7 +56,7 @@ def yolo_trash_on_trash_val():
     """
     image_path = 'datasets/taco/images/val/'
     model = YOLO(weights_path)
-    delay = 1500
+    delay = 2000
     return image_path, model, delay
 
 
