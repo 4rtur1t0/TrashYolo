@@ -14,6 +14,16 @@ def yolo_orig_on_people():
     delay = 1500
     return image_path, model, delay
 
+def yolo_orig_on_trash():
+    """
+    EVALUAMOS EL MODELO ORIGINAL DE YOLO SOBRE DATOS DE BASURA
+    :return:
+    """
+    image_path = 'datasets/taco/images/train/'
+    model = YOLO('yolov8n.pt')
+    delay = 1500
+    return image_path, model, delay
+
 
 def yolo_trash_on_people():
     """
@@ -35,6 +45,7 @@ def yolo_trash_on_trash_train():
     model = YOLO(weights_path)
     delay = 1500
     return image_path, model, delay
+
 
 def yolo_trash_on_trash_val():
     """
@@ -92,6 +103,9 @@ if __name__ == '__main__':
 
     image_path, model, delay = yolo_orig_on_people()
     inference(image_path=image_path, model=model, delay=delay, title='ORIG. YOLO ON PEOPLE')
+
+    image_path, model, delay = yolo_orig_on_trash()
+    inference(image_path=image_path, model=model, delay=delay, title='ORIG. YOLO ON TRASH')
 
     image_path, model, delay = yolo_trash_on_people()
     inference(image_path=image_path, model=model, delay=delay, title='TRASH YOLO ON PEOPLE')
